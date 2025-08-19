@@ -1,0 +1,810 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width= device-width, scale=1.0">
+    <title>OLUSOLA PHARMACY AND SUPERMARKET LTD</title>
+  </head>
+  <body>
+<style>
+  body {
+    background: white;
+    color: red;
+    padding: 0;
+    margin: 0;
+    font-family: Poppins, Arial, sans-serif;
+  }
+
+  header {
+    text-align: center;
+    background: red;
+    color: white;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(255,0,0,0.3);
+  }
+
+  header img {
+    border-radius: 50%;
+    width: 90px;
+    height: 90px;
+    border: 3px solid white;
+  }
+
+  header h1 {
+    font-size: 2.2rem;
+    font-weight: bold;
+    font-style: italic;
+    margin: 10px 0;
+    text-shadow: 2px 2px 5px #fff;
+  }
+
+  header p {
+    font-size: 1.2rem;
+    margin: 5px 0;
+    font-weight: bold;
+  }
+
+  nav {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    background: red;
+    padding: 15px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 4px 10px rgba(255,0,0,0.3);
+  }
+
+  nav a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+  }
+
+  nav a:hover {
+    color: #ffcccc;
+    transform: scale(1.1);
+  }
+
+  section {
+    padding: 20px 10px;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+
+  section h2 {
+    color: red;
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+
+  section p,
+  section ul {
+    margin-bottom: 10px;
+    font-size: 1rem;
+    text-align: left;
+    color: #990000;
+  }
+
+  form {
+    max-width: 700px;
+    margin: 0 auto;
+    background: #fff0f0;
+    padding: 25px;
+    border-radius: 10px;
+    border: 2px solid red;
+    box-shadow: 0 0 15px rgba(255,0,0,0.3);
+  }
+
+  form label {
+    font-weight: bold;
+    display: block;
+    margin-top: 15px;
+    color: red;
+  }
+
+  form input, 
+  form select, 
+  form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 2px solid red;
+    border-radius: 5px;
+    background: #fff8f8;
+    color: red;
+    font-weight: bold;
+  }
+
+  form button {
+    background: red;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    margin-top: 20px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+  }
+
+  form button:hover {
+    background: #cc0000;
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(255,0,0,0.5);
+  }
+
+  .order-summary {
+    display: none;
+    margin-top: 20px;
+    padding: 15px;
+    background: #fff0f0;
+    border: 2px solid red;
+    border-radius: 5px;
+    color: red;
+    font-weight: bold;
+  }
+.media-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.media-gallery img,
+.media-gallery video {
+  width: 300px;
+  height: auto;
+  object-fit: cover;
+  border: 3px solid red;
+  border-radius: 10px;
+}
+    .testimonial {
+      background: #ffe5e5;
+      padding: 15px;
+      margin-bottom: 20px;
+      border-left: 5px solid red;
+      border-radius: 5px;}
+      
+  footer {
+    background: red;
+    color: white;
+    text-align: center;
+    padding: 25px;
+    margin-top: 40px;
+    box-shadow: 0 -4px 10px rgba(255,0,0,0.3);
+  }
+
+  footer a {
+    color: white;
+    font-weight: bold;
+    text-decoration: underline;
+  }
+
+  footer a:hover {
+    color: #ffcccc;
+  }
+/* WhatsApp Floating Button */
+.whatsapp-float {
+  position: fixed;
+  right: 20px;
+  bottom: 70px; /* shows above back-to-top */
+  background: #25D366;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 30px;
+  font-size: 10px;
+  font-weight: bold;
+  text-decoration: none;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  transition: 0.3s;
+  z-index: 1000;
+}
+
+.whatsapp-float:hover {
+  background: #1ebc59;
+}
+  .back-to-top {
+    display: none;
+    background: red;
+    color: white;
+    padding: 10px 12px;
+    border-radius: 40px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    position: fixed;
+    right: 25px;
+    bottom: 10px;
+    z-index: 1000;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .back-to-top:hover {
+    background: #cc0000;
+    box-shadow: 0 0 15px rgba(255,0,0,0.8);
+    transform: scale(1.1);
+  }
+</style>
+</head>
+<body>
+
+  <header>
+<img src="https://i.ibb.co/Tx3yPmP4/IMG-20250818-WA0046.jpg" alt="Company Logo">
+    <h1>OLUSOLA PHARMACY AND SUPERMARKET LTD</h1>
+    <p>A Home Of Quality Shopping...</p>
+  </header>
+
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#about">About Us</a>
+    <a href="#service">Our Services</a>
+    <a href="#order">Order</a>
+  </nav>
+
+<section id="home">
+  <h2>Welcome</h2>
+  <p>
+    <strong>Welcome to Olusola Pharmacy & Supermarket</strong><br>
+    At Olusola Pharmacy & Supermarket, your health, wellness, and daily needs are our priority. 
+    We are more than just a store — we are a trusted partner in your healthy living and a 
+    one-stop center for quality products.
+  </p>
+  <p>
+    Whether you are here to find reliable medications, healthcare advice, or to shop for 
+    your household essentials, we are committed to serving you with excellence, care, and integrity.
+  </p>
+  <p>
+    Thank you for choosing Olusola Pharmacy & Supermarket — 
+    <em>where health meets convenience, and every customer is family.</em>
+  </p>
+</section>
+
+<section id="about">
+  <h2>About Us</h2>
+  <p>
+    Olusola Pharmacy & Supermarket is a trusted name committed to promoting healthy living and 
+    providing convenient access to everyday essentials. Founded on the values of integrity, 
+    excellence, and customer care, we are dedicated to meeting the health and lifestyle needs 
+    of our community.
+  </p>
+
+  <h3>At Olusola Pharmacy, we provide:</h3>
+  <ul>
+    <li>Genuine prescription and over-the-counter medications</li>
+    <li>Professional health advice and pharmaceutical care</li>
+    <li>Wellness and personal care products</li>
+  </ul>
+
+  <h3>At Olusola Supermarket, we offer:</h3>
+  <ul>
+    <li>Quality groceries and household essentials</li>
+    <li>Fresh and affordable products for your daily needs</li>
+    <li>A convenient one-stop shopping experience</li>
+  </ul>
+
+  <p>
+    Our mission is to combine healthcare and convenience in one place, ensuring that every 
+    customer leaves satisfied, cared for, and confident in the products they purchase.
+  </p>
+
+  <h3>Vision</h3>
+  <p>
+    To be the first choice of customers for their health and wellness needs by consistently 
+    understanding and exceeding their expectations.
+  </p>
+
+  <h3>Mission</h3>
+  <p>
+    To have a positive impact on the provision of public health services by ensuring the 
+    safe and effective use of medications and affordable access to medications.
+  </p>
+</section>
+
+  <section id="service">
+    <h2>Our Services</h2>
+    <ul>
+      <li>BLOOD PRESSURE </li>
+      <li>BLOOD SUGAR TEST</li>
+      <li>BODY MASS INDEX </li>
+      <li>COUNSELING</li>
+      <li>MALARIA PARASITE TEST</li>
+    </ul>
+  </section>
+
+<section id="order">
+  <h2>Place Your Order</h2>
+  <form id="orderForm" onsubmit="return handleOrder(event);">
+    <h3>Customer Details</h3>
+    <label for="fullname">Full Name</label>
+    <input type="text" id="fullname" required>
+
+    <label for="phone">Phone Number</label>
+    <input type="tel" id="phone" required>
+
+    <label for="address">Home Address</label>
+    <textarea id="address" rows="2" required></textarea>
+
+    <label for="location">Location (State)</label>
+    <select id="location" required>
+      <option value="">--Select State--</option>
+      <option>Abia</option>
+      <option>Adamawa</option>
+      <option>Akwa Ibom</option>
+      <option>Anambra</option>
+      <option>Bauchi</option>
+      <option>Bayelsa</option>
+      <option>Benue</option>
+      <option>Borno</option>
+      <option>Cross River</option>
+      <option>Delta</option>
+      <option>Ebonyi</option>
+      <option>Edo</option>
+      <option>Ekiti</option>
+      <option>Enugu</option>
+      <option>FCT - Abuja</option>
+      <option>Gombe</option>
+      <option>Imo</option>
+      <option>Jigawa</option>
+      <option>Kaduna</option>
+      <option>Kano</option>
+      <option>Katsina</option>
+      <option>Kebbi</option>
+      <option>Kogi</option>
+      <option>Kwara</option>
+      <option>Lagos</option>
+      <option>Nasarawa</option>
+      <option>Niger</option>
+      <option>Ogun</option>
+      <option>Ondo</option>
+      <option>Osun</option>
+      <option>Oyo</option>
+      <option>Plateau</option>
+      <option>Rivers</option>
+      <option>Sokoto</option>
+      <option>Taraba</option>
+      <option>Yobe</option>
+      <option>Zamfara</option>
+    </select>
+
+    <h3>Pharmacy Section</h3>
+    <label for="drugs">Select Drugs</label>
+    <select id="drugs" multiple onchange="updateDrugQuantities();">
+      <option>Paracetamol</option>
+      <option>Amoxicillin</option>
+      <option>Cough Syrup</option>
+      <option>Vitamin C</option>
+      <option>Ibuprofen</option>
+      <option>Antimalarial</option>
+      <option>Blood Tonic</option>
+      <option>Antibiotics</option>
+      <option>Aspirin</option>
+      <option>Metformin</option>
+      <option>Lisinopril</option>
+      <option>Simvastatin</option>
+      <option>Omeprazole</option>
+      <option>Levothyroxine</option>
+      <option>Atorvastatin</option>
+      <option>Hydrochlorothiazide</option>
+      <option>Sertraline</option>
+      <option>Gabapentin</option>
+      <option>Albuterol</option>
+      <option>Prednisone</option>
+      <option>Azithromycin</option>
+      <option>Furosemide</option>
+      <option>Metoprolol</option>
+      <option>Warfarin</option>
+      <option>Fluoxetine</option>
+      <option>Clonazepam</option>
+      <option>Tramadol</option>
+      <option>Diphenhydramine</option>
+      <option>Ranitidine</option>
+      <option>Calcium Carbonate</option>
+      <option>Magnesium Hydroxide</option>
+      <option>Ethinyl Estradiol</option>
+      <option>Finasteride</option>
+      <option>Diclofenac</option>
+      <option>Cephalexin</option>
+      <option>Montelukast</option>
+      <option>Insulin</option>
+      <option>Risperidone</option>
+      <option>Venlafaxine</option>
+      <option>Oxycodone</option>
+      <option>Chlorpheniramine</option>
+      <option>Ciprofloxacin</option>
+      <option>Topiramate</option>
+      <option>Fluticasone</option>
+      <option>Losartan</option>
+      <option>Carbamazepine</option>
+      <option>Propranolol</option>
+      <option>Celecoxib</option>
+      <option>Clopidogrel</option>
+      <option>Levocetirizine</option>
+      <option>Hydrocodone</option>
+      <option>Azathioprine</option>
+      <option>Topical Hydrocortisone</option>
+      <option>Clindamycin</option>
+      <option>Spironolactone</option>
+      <option>Valacyclovir</option>
+      <option>Ropinirole</option>
+      <option>Glyburide</option>
+      <option>Hydroxocobalamin</option>
+      <option>Tiotropium</option>
+      <option>Amlodipine</option>
+      <option>Quetiapine</option>
+      <option>Hydroxychloroquine</option>
+      <option>Varenicline</option>
+      <option>Carvedilol</option>
+      <option>Isosorbide Mononitrate</option>
+      <option>Etodolac</option>
+      <option>Dexlansoprazole</option>
+      <option>Betamethasone</option>
+      <option>Nitroglycerin</option>
+      <option>Buspirone</option>
+      <option>Pregabalin</option>
+      <option>Fentanyl</option>
+      <option>Cholecalciferol</option>
+      <option>Paliperidone</option>
+      <option>Brimonidine</option>
+      <option>Oxymetazoline</option>
+      <option>Ketorolac</option>
+      <option>Triazolam</option>
+      <option>Esomeprazole</option>
+      <option>Phenobarbital</option>
+      <option>Fluconazole</option>
+      <option>Proton Pump Inhibitors</option>
+      <option>Mupirocin</option>
+      <option>Dexamethasone</option>
+      <option>Famotidine</option>
+      <option>Levofloxacin</option>
+      <option>Duloxetine</option>
+      <option>Cholestyramine</option>
+      <option>Ketoconazole</option>
+      <option>Bisoprolol</option>
+      <option>Meclizine</option>
+      <option>Amiodarone</option>
+      <option>Roflumilast</option>
+      <option>Desogestrel</option>
+      <option>Levomefolate Calcium</option>
+      <option>Thyroid Extract</option>
+      <option>Chlordiazepoxide</option>
+      <option>Fexofenadine</option>
+      <option>Topiramate</option>
+      <option>Methylphenidate</option>
+      <option>Dicyclomine</option>
+      <option>Sumatriptan</option>
+      <option>Medroxyprogesterone Acetate</option>
+      <option>Hydroxyzine</option>
+      <option>Folic Acid</option>
+      <option>Thiamine</option>
+      <option>Riboflavin</option>
+      <option>Niacin</option>
+      <option>Pyridoxine</option>
+      <option>Cyanocobalamin</option>
+      <option>Biotin</option>
+      <option>Other</option>
+    </select>
+    
+    <div id="drugQuantities"></div>
+
+    <h3>Supermarket Section</h3>
+    <label for="supermarket">Select Items</label>
+    <select id="supermarket" multiple onchange="updateMarketQuantities();">
+      <option>Rice (5kg)</option>
+      <option>Beans (1kg)</option>
+      <option>Milk (Tin)</option>
+      <option>Bread</option>
+      <option>Flour (1kg)</option>
+      <option>Salt (1kg)</option>
+      <option>Sugar (1kg)</option>
+      <option>Cooking Oil (1L)</option>
+      <option>Vegetable Oil (1L)</option>
+      <option>Detergent</option>
+      <option>Toothpaste</option>
+      <option>Shampoo</option>
+      <option>Soap</option>
+      <option>Toilet Paper</option>
+      <option>Sanitary Pads</option>
+      <option>Diapers</option>
+      <option>Eggs</option>
+      <option>Chicken (1kg)</option>
+      <option>Beef (1kg)</option>
+      <option>Pork (1kg)</option>
+      <option>Fish (1kg)</option>
+      <option>Potatoes (1kg)</option>
+      <option>Onions (1kg)</option>
+      <option>Carrots (1kg)</option>
+      <option>Cabbage (1kg)</option>
+      <option>Bell Peppers (1kg)</option>
+      <option>Garlic</option>
+      <option>Ginger</option>
+      <option>Yogurt</option>
+      <option>Cheese</option>
+      <option>Butter</option>
+      <option>Ice Cream</option>
+      <option>Cereal</option>
+      <option>Pasta</option>
+      <option>Noodles</option>
+      <option>Chips</option>
+      <option>Nuts</option>
+      <option>Peanut Butter</option>
+      <option>Jam</option>
+      <option>Honey</option>
+      <option>Fruit Juice</option>
+      <option>Fresh Fruits</option>
+      <option>Frozen Vegetables</option>
+      <option>Snack Bars</option>
+      <option>Granola</option>
+      <option>Energy Drinks</option>
+      <option>Candies</option>
+      <option>Chocolate</option>
+      <option>Vinegar</option>
+      <option>Mustard</option>
+      <option>Ketchup</option>
+      <option>Mayonnaise</option>
+      <option>Hot Sauce</option>
+      <option>Pickles</option>
+      <option>Cooking Spices</option>
+      <option>Stock Cubes</option>
+      <option>Other</option>
+    </select>
+
+    <div id="marketQuantities"></div>
+
+    <button type="submit">Place Order</button>
+  </form>
+
+  <div class="order-summary" id="orderSummary" style="display:none;">
+    <h3>Order Summary</h3>
+    <p id="summaryText"></p>
+    <button id="confirmOrder" style="display:none;" onclick="confirmOrder()">Confirm Order</button>
+  </div>
+</section>
+
+<script>
+  function updateDrugQuantities() {
+    const drugSelect = document.getElementById('drugs');
+    const selectedOptions = Array.from(drugSelect.selectedOptions);
+    const drugQuantitiesDiv = document.getElementById('drugQuantities');
+    drugQuantitiesDiv.innerHTML = '';
+
+    selectedOptions.forEach(option => {
+      if (option.value === "Other") {
+        drugQuantitiesDiv.innerHTML += `
+          <label for="otherDrug">Other Drug Name</label>
+          <input type="text" id="otherDrug" placeholder="Specify other drug" required>
+          <label for="otherDrugQty">Quantity</label>
+          <input type="number" id="otherDrugQty" min="1" placeholder="Enter quantity" required>
+        `;
+      } else {
+        drugQuantitiesDiv.innerHTML += `
+          <label for="${option.value}Qty">${option.value} Quantity</label>
+          <input type="number" id="${option.value}Qty" min="1" placeholder="Enter quantity" required>
+        `;
+      }
+    });
+  }
+
+  function updateMarketQuantities() {
+    const marketSelect = document.getElementById('supermarket');
+    const selectedOptions = Array.from(marketSelect.selectedOptions);
+    const marketQuantitiesDiv = document.getElementById('marketQuantities');
+    marketQuantitiesDiv.innerHTML = '';
+
+    selectedOptions.forEach(option => {
+      if (option.value === "Other") {
+        marketQuantitiesDiv.innerHTML += `
+          <label for="otherMarketItem">Other Item Name</label>
+          <input type="text" id="otherMarketItem" placeholder="Specify other item" required>
+          <label for="otherMarketQty">Quantity</label>
+          <input type="number" id="otherMarketQty" min="1" placeholder="Enter quantity" required>
+        `;
+      } else {
+        marketQuantitiesDiv.innerHTML += `
+          <label for="${option.value}Qty">${option.value} Quantity</label>
+          <input type="number" id="${option.value}Qty" min="1" placeholder="Enter quantity" required>
+        `;
+      }
+    });
+  }
+
+  function handleOrder(event) {
+    event.preventDefault();
+
+    const fullname = document.getElementById('fullname').value;
+    const phone = document.getElementById('phone').value;
+    const address = document.getElementById('address').value;
+    const location = document.getElementById('location').value;
+
+    const drugs = Array.from(document.getElementById('drugs').selectedOptions).map(option => option.value);
+    const drugQuantities = drugs.map(drug => {
+      if (drug === "Other") {
+        return {
+          name: document.getElementById('otherDrug').value,
+          quantity: document.getElementById('otherDrugQty').value
+        };
+      }
+      return {
+        name: drug,
+        quantity: document.getElementById(`${drug}Qty`).value
+      };
+    });
+
+    const supermarketItems = Array.from(document.getElementById('supermarket').selectedOptions).map(option => option.value);
+    const marketQuantities = supermarketItems.map(item => {
+      if (item === "Other") {
+        return {
+          name: document.getElementById('otherMarketItem').value,
+          quantity: document.getElementById('otherMarketQty').value
+        };
+      }
+      return {
+        name: item,
+        quantity: document.getElementById(`${item}Qty`).value
+      };
+    });
+
+    const summaryText = `
+      Name: ${fullname}
+      Phone: ${phone}
+      Address: ${address}
+      Location: ${location}
+      Drugs: ${drugQuantities.map(drug => `${drug.name} (Qty: ${drug.quantity})`).join(', ')}
+      Supermarket Items: ${marketQuantities.map(item => `${item.name} (Qty: ${item.quantity})`).join(', ')}
+    `;
+
+    document.getElementById('summaryText').innerText = summaryText;
+    document.getElementById('orderSummary').style.display = 'block';
+    document.getElementById('confirmOrder').style.display = 'block';
+  }
+
+  function confirmOrder() {
+    const summaryText = document.getElementById('summaryText').innerText;
+
+    // Generate WhatsApp link
+    const message = encodeURIComponent(summaryText);
+    const whatsappLink = `https://wa.me/2349065268417?text=${message}`;
+    window.open(whatsappLink, '_blank');
+  }
+</script>
+
+
+  
+<section id="gallery">
+  <h2>Our Products & Videos</h2>
+  <div class="media-gallery">
+    <div class="media-item">
+      <img src="https://i.ibb.co/SpXpkPQ/IMG-20250818-WA0059.jpg" alt="Showcase 1">
+    </div>
+    <div class="media-item">
+      <img src="https://i.ibb.co/RkmJbZWx/IMG-20250818-WA0057.jpg" alt="Showcase 2">
+    </div>
+    <div class="media-item">
+      <img src="https://i.ibb.co/ds8DLCjz/IMG-20250818-WA0065.jpg" alt="Showcase 3">
+    </div>
+
+<section id="videos" style="display: flex; flex-wrap: wrap; gap: 20px;">
+  <div class="video-item" style="position: relative; width: 350px; padding-bottom: 56.25%;">
+    <iframe 
+      src="https://streamable.com/e/rvs8u8" 
+      style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none;" 
+      allowfullscreen>
+    </iframe>
+  </div>
+
+  <div class="video-item" style="position: relative; width: 350px; padding-bottom: 56.25%;">
+    <iframe 
+      src="https://streamable.com/e/bavxfp" 
+      style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none;" 
+      allowfullscreen>
+    </iframe>
+  </div>
+</section>
+
+    </div>
+  </div>
+</section>
+
+<!-- Hover effect -->
+<style>
+  #pictures img:hover {
+    transform: scale(1.05);
+  }
+</style>
+<section id="testimonials">
+  <h2>Customer Testimonials</h2>
+  <div class="testimonial">
+    <p>"Excellent service and fast delivery! Highly recommend Olusola Pharmacy." – Aisha T.</p>
+  </div>
+  <div class="testimonial">
+    <p>"The staff is very knowledgeable and friendly. I always get my medicines here." – Kunle O.</p>
+  </div>
+</section>
+
+<footer>
+    <p>&copy; 2025 OLUSOLA PHARMACY & SUPERMARKET</p>
+    <p>Phone: +234 906 5268 417 | Email:Olusolapharmacyandsupermarket@gmail.com</p>
+    <p>
+      LOCATION: SUITE 42 FATE ROAD, OPP NNPC FILLING STATION, ILORIN, KWARA STATE <br>
+      <a href="https://www.google.com/maps?q=Suite+42+Fate+Road+Opp+NNPC+Filling+Station+Ilorin+Kwara+State" 
+         target="_blank" style="color: orange; text-decoration: underline;">
+        📍 View on Google Maps
+      </a>
+    </p>
+    <p>
+      Follow us: 
+      <a href="https://facebook.com/olusola pharmacy" target="_blank">Facebook</a> | 
+<a href="https://tiktok.com/@olusolapharmacy" target="_blank">Tiktok</a> |
+<a href="https://instagram.com/olusola pharmacy" target="_blank">Instagram</a>
+    </p>
+  </footer>
+<!-- Back to Top Button -->
+  <a href="#" class="back-to-top">⬆ Back to Top</a>
+
+  <!-- WhatsApp Chat Button -->
+  <a href="https://wa.me/2349065268417" class="whatsapp-float" target="_blank">
+    💬 Chat on WhatsApp
+  </a>
+  <div class="back-to-top" onclick="scrollToTop()">⬆ Back to Top</div>
+
+  <script>
+    // Handle order form
+    const orderForm = document.getElementById('orderForm');
+    const orderSummary = document.getElementById('orderSummary');
+    const summaryText = document.getElementById('summaryText');
+
+    orderForm.addEventListener('submit', function(e) {
+      e.preventDefault();
+
+      const fullname = document.getElementById('fullname').value;
+      const phone = document.getElementById('phone').value;
+      const address = document.getElementById('address').value;
+      const location = document.getElementById('location').value;
+
+      const drugs = Array.from(document.getElementById('drugs').selectedOptions).map(o => o.value);
+      const drugQty = document.getElementById('drugQty').value;
+
+      const supermarket = Array.from(document.getElementById('supermarket').selectedOptions).map(o => o.value);
+      const marketQty = document.getElementById('marketQty').value;
+
+      let summary = `<strong>Customer Details:</strong><br>
+        Name: ${fullname}<br>
+        Phone: ${phone}<br>
+        Address: ${address}<br>
+        Location: ${location}<br><br>`;
+
+      if(drugs.length > 0) {
+        summary += `<strong>Pharmacy Order:</strong> ${drugs.join(", ")} (Qty: ${drugQty})<br>`;
+      }
+
+      if(supermarket.length > 0) {
+        summary += `<strong>Supermarket Order:</strong> ${supermarket.join(", ")} (Qty: ${marketQty})<br>`;
+      }
+
+      summaryText.innerHTML = summary;
+      orderSummary.style.display = 'block';
+      orderSummary.scrollIntoView({ behavior: 'smooth' });
+    });
+
+    // Back to top
+    function scrollToTop() {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    const backToTopBtn = document.querySelector('.back-to-top');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 200) {
+        backToTopBtn.style.display = 'block';
+      } else {
+        backToTopBtn.style.display = 'none';
+      }
+    });
+  </script>
+</body>
+</html>
